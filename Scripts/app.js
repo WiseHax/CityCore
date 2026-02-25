@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
+    ? 'http://localhost:5000/api'
+    : 'https://citycore.onrender.com/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const listingGrid = document.getElementById('listing-grid');

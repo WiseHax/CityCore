@@ -1,7 +1,7 @@
 // CITYCORE: Precision Directory Logic v3.5 (Cloud-Ready)
 const API_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api'
-    : 'https://citycore-api.onrender.com/api'; // I-update natin 'to pag nakuha na natin yung Render URL
+    : 'https://citycore.onrender.com/api'; // I-update natin 'to pag nakuha na natin yung Render URL
 
 document.addEventListener('DOMContentLoaded', () => {
     const listingGrid = document.getElementById('listing-grid');

@@ -1,7 +1,7 @@
 // CITYCORE: Detail Logic (Cloud-Ready)
 const API_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api'
-    : 'https://citycore-api.onrender.com/api';
+    : 'https://citycore.onrender.com/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);

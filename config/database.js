@@ -8,7 +8,8 @@ const sequelize = process.env.DATABASE_URL
         logging: false,
         dialectOptions: {
             ssl: {
-                rejectUnauthorized: false // Required for most cloud DBs
+                require: true,
+                rejectUnauthorized: false
             }
         }
     })
