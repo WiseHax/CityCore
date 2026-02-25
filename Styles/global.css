@@ -1,0 +1,114 @@
+/* CITYCORE: Global Shared Styles v3.7 (Perfect Alignment & Visibility) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-light: #a5b4fc;
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --bg-dark: #020617;
+    --glass: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+/* FIX: Ensure all links are white and no underlines by default */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+#three-canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+
+/* THE "REAL" PERFECT NAVBAR */
+.navbar {
+    background: rgba(2, 6, 23, 0.7) !important;
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1.2rem 0;
+    z-index: 9999;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Keep brand at start */
+    position: relative;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.6rem !important;
+    letter-spacing: -1.5px;
+    color: #ffffff !important;
+    z-index: 10001;
+}
+.navbar-brand span { color: var(--primary-light) !important; }
+
+/* THE MENU: Dead-Center logic */
+.navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    justify-content: center;
+    width: fit-content;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6) !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-light);
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+/* FOOTER */
+.footer-v2 { padding: 8rem 0 4rem; border-top: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
+
+/* UTILS */
+.reveal { opacity: 0; transform: translateY(40px); }
+.floating { animation: float 5s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+
+@media (max-width: 992px) {
+    .navbar-collapse { position: static; transform: none; width: 100%; justify-content: flex-end; }
+    .navbar-nav { gap: 1.5rem; }
+}

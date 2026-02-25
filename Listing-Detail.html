@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Node Intelligence: Detailed business data on the CityCore network.">
+    <title>Node Intelligence | CITYCORE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/details.css">
+</head>
+<body>
+
+    <canvas id="three-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">CITYCORE<span>.</span></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Universe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Food.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Node Header Area -->
+    <div class="container py-5">
+        <div class="node-header reveal">
+            <div class="node-icon-large floating">
+                <span id="listing-icon-large">🏢</span>
+            </div>
+            <div>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span id="listing-badge-category" class="node-id-badge">Sector Node</span>
+                    <span class="small text-success fw-bold"><i class="fa-solid fa-satellite-check me-1"></i> Orbital Verified</span>
+                </div>
+                <h1 id="listing-name" class="display-3 fw-800 mb-2 tracking-tighter">Initializing Node...</h1>
+                <div class="d-flex flex-wrap align-items-center gap-4 text-white-50 fw-semibold">
+                    <span id="listing-rating" class="text-warning"><i class="fa-solid fa-star me-1"></i> -- (Planetary Consensus)</span>
+                    <span id="listing-location"><i class="fa-solid fa-location-dot me-2 text-primary"></i> Tracking Telemetry...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <!-- Left Column: Primary Intelligence -->
+            <div class="col-lg-8">
+                <div class="glass-panel p-2 rounded-pill d-inline-flex mb-5 reveal">
+                    <ul class="nav nav-pills" id="detailTabs" role="tablist">
+                        <li class="nav-item"><button class="nav-link active rounded-pill px-4 fw-bold" data-bs-toggle="tab" data-bs-target="#overview" type="button">Node Intelligence</button></li>
+                        <li class="nav-item"><button class="nav-link rounded-pill px-4 fw-bold" data-bs-toggle="tab" data-bs-target="#reviews" type="button">Community Consensus</button></li>
+                    </ul>
+                </div>
+
+                <div class="tab-content reveal">
+                    <!-- Overview -->
+                    <div class="tab-pane fade show active" id="overview">
+                        <div class="glass-panel p-5 mb-5">
+                            <h4 class="fw-bold mb-4 tracking-tight">Mission Objective</h4>
+                            <p id="listing-description" class="text-white-50 lh-lg fs-5">Processing node description stream...</p>
+                        </div>
+                        <h4 class="fw-bold mb-4 tracking-tight">Node Capabilities</h4>
+                        <div id="listing-amenities" class="row g-4 mb-5">
+                            <!-- Amenities -->
+                        </div>
+                    </div>
+
+                    <!-- Community Consensus -->
+                    <div class="tab-pane fade" id="reviews">
+                        <div class="glass-panel p-5 mb-5">
+                            <h5 class="fw-bold mb-4">Add Your Intel</h5>
+                            <form id="review-form">
+                                <div class="row g-4">
+                                    <div class="col-md-6"><input type="text" id="review-name" class="form-control py-3" placeholder="Authorized Identity" required></div>
+                                    <div class="col-md-6"><select id="review-rating" class="form-select py-3" required><option value="" disabled selected>Evaluation Score</option><option value="5">5/5 - Optimal</option><option value="4">4/5 - High Priority</option></select></div>
+                                    <div class="col-12"><textarea id="review-comment" class="form-control" rows="4" placeholder="Report your findings with this node..." required></textarea></div>
+                                    <div class="col-12"><button type="submit" class="btn btn-primary px-5 py-3 rounded-pill fw-bold">Transmit Intel <i class="fa-solid fa-paper-plane ms-2"></i></button></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="listing-reviews"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Operational Links -->
+            <div class="col-lg-4">
+                <div class="glass-panel p-5 sticky-top" style="top: 100px;">
+                    <h4 class="fw-bold mb-5 tracking-tight">Operational Links</h4>
+                    <div class="d-flex align-items-center gap-4 mb-4">
+                        <div class="icon-box-3d m-0" style="width: 60px; height: 60px; font-size: 1.2rem;"><i class="fa-solid fa-phone"></i></div>
+                        <div><p class="small opacity-50 mb-0 fw-bold uppercase tracking-widest" style="font-size: 0.65rem;">Direct Frequency</p><span id="contact-phone" class="fw-bold">--</span></div>
+                    </div>
+                    <div class="d-flex align-items-center gap-4 mb-5">
+                        <div class="icon-box-3d m-0" style="width: 60px; height: 60px; font-size: 1.2rem;"><i class="fa-solid fa-globe"></i></div>
+                        <div><p class="small opacity-50 mb-0 fw-bold uppercase tracking-widest" style="font-size: 0.65rem;">Digital Node</p><a id="contact-website" href="#" target="_blank" class="text-primary fw-bold text-decoration-none">Not Linked</a></div>
+                    </div>
+                    <a id="btn-map" href="#" target="_blank" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-lg mb-4">
+                        <i class="fa-solid fa-location-arrow me-2"></i> Deploy Navigation
+                    </a>
+                    <div class="mt-5 pt-4 border-top text-center opacity-50">
+                        <p class="small mb-0">CityCore Intelligence Node v2.3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/three-bg.js"></script>
+    <script type="module" src="Scripts/details.js"></script>
+</body>
+</html>

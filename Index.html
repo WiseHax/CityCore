@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CityCore is a high-fidelity 3D immersive local directory.">
+    <title>CITYCORE | The Orbital Directory</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+
+    <canvas id="three-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">CITYCORE<span>.</span></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link active" href="Index.html">Universe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Food.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">Mission</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="reveal-hero">
+                <h1 class="hero-title">
+                    <span style="color: var(--primary-light)">NAVIGATE YOUR</span> <br>
+                    CITY.
+                </h1>
+                <p class="hero-subtitle text-white-50">
+                    Next-generation local discovery. Immersive, orbital, and hyper-accurate mapping system.
+                </p>
+                <a href="#sectors" class="btn-core">
+                    Initialize Discovery <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sectors" class="container py-5">
+        <div class="mb-5 reveal-header">
+            <h2 class="display-5 fw-800 tracking-tighter text-uppercase">Sector Nodes</h2>
+            <p class="text-white-50">Operational hubs within the CityCore ecosystem.</p>
+        </div>
+
+        <div class="bento-grid">
+            <a href="Food.html" class="bento-item wide node-reveal-left">
+                <div class="bento-icon"><i class="fa-solid fa-utensils"></i></div>
+                <h3 class="bento-title">Sustenance</h3>
+                <p class="bento-text">Elite dining and culinary nodes across the sector.</p>
+            </a>
+
+            <div class="bento-item tall node-reveal-right">
+                <div class="mb-auto">
+                    <div class="bento-icon mb-4"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="glass-panel p-4 border-primary border-opacity-25" style="background: rgba(99, 102, 241, 0.1);">
+                        <p class="small fw-bold text-uppercase tracking-widest mb-2" style="font-size: 0.7rem; color: var(--primary-light) !important;">Project Architect</p>
+                        <a href="https://github.com/WiseHax" target="_blank" class="text-white text-decoration-none d-flex align-items-center gap-3 group">
+                            <i class="fa-brands fa-github fa-2xl"></i>
+                            <span class="fs-3 fw-800 tracking-tighter">WiseHax</span>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="bento-title mt-4">Core Intel</h3>
+                <p class="bento-text">Real-time planetary data and verified insights.</p>
+                <div class="mt-4 p-4 rounded-4" style="background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="small opacity-50">Status</span>
+                        <span class="small text-success fw-bold">Optimal</span>
+                    </div>
+                    <div class="progress bg-dark" style="height: 4px;">
+                        <div class="progress-bar bg-primary" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Services.html" class="bento-item node-reveal-left">
+                <div class="bento-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3 class="bento-title">Services</h3>
+                <p class="bento-text">Infrastructure nodes.</p>
+            </a>
+
+            <a href="Services.html" class="bento-item node-reveal-right">
+                <div class="bento-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3 class="bento-title">Discovery</h3>
+                <p class="bento-text">Hidden city gems.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer-v2">
+        <div class="container text-center">
+            <a class="navbar-brand fs-1 d-block mb-4" href="#">CITYCORE.</a>
+            <p class="text-white-50 small">&copy; 2026 CityCore Intelligence. Orbital Systems Active.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/three-bg.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mission Briefing: The core philosophy behind the CityCore ecosystem.">
+    <title>Mission Briefing | CITYCORE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/about.css">
+</head>
+<body>
+
+    <canvas id="three-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">CITYCORE<span>.</span></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Universe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Food.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="About.html">Mission</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="about-hero reveal">
+            <span class="badge rounded-pill px-4 py-2 mb-4" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.3); color: #818cf8;">MISSION OBJECTIVE</span>
+            <h1 class="display-2 fw-800 tracking-tighter mb-4">Connecting the <br> <span style="color: var(--primary-light)">Local Universe.</span></h1>
+            <p class="text-white-50 fs-5 mx-auto" style="max-width: 700px;">
+                We are on a trajectory to build the most advanced, intuitive, and beautiful bridge between local residents and the heart of their city.
+            </p>
+        </header>
+
+        <!-- Story Section -->
+        <section class="mission-panel reveal">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <h2 class="display-5 fw-800 mb-4 tracking-tight">Our Evolution</h2>
+                    <p class="text-white-50 fs-5 lh-lg">
+                        What started as a simple passion project has evolved into CITYCORE. — a high-tech directory ecosystem. We believe that professional design and reliable data should be accessible to every community. 
+                    </p>
+                    <p class="text-white-50 fs-5 lh-lg mt-4">
+                        By bridging the gap between thousands of nodes and verified service providers, we're strengthening the local economy one interaction at a time. Orbital intelligence, localized impact.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="icon-box-3d mx-auto floating" style="width: 200px; height: 200px; font-size: 6rem; background: rgba(255,255,255,0.05); border-radius: 50px;">
+                        <i class="fa-solid fa-satellite"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Grid -->
+        <div class="text-center mb-5 reveal">
+            <h2 class="display-6 fw-800 tracking-tight">Core Philosophy</h2>
+            <p class="text-white-50">Principles driving the CITYCORE experience.</p>
+        </div>
+
+        <div class="philosophy-grid">
+            <div class="philosophy-item reveal">
+                <div class="philosophy-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h4 class="fw-bold mb-3 text-white">Community-First</h4>
+                <p class="text-white-50 small">Prioritizing real local impact and meaningful connections over generic corporate growth.</p>
+            </div>
+            <div class="philosophy-item reveal">
+                <div class="philosophy-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4 class="fw-bold mb-3 text-white">Absolute Integrity</h4>
+                <p class="text-white-50 small">Zero-tolerance for inaccuracy. Every business node is verified by our community intelligence.</p>
+            </div>
+            <div class="philosophy-item reveal">
+                <div class="philosophy-icon"><i class="fa-solid fa-microchip"></i></div>
+                <h4 class="fw-bold mb-3 text-white">Radical Technology</h4>
+                <p class="text-white-50 small">Pushing the boundaries of the modern web to provide the best planetary user experience.</p>
+            </div>
+        </div>
+
+        <!-- Architect Credit -->
+        <div class="architect-badge reveal">
+            <p class="small fw-bold text-uppercase tracking-widest text-primary mb-3">Master Architect</p>
+            <a href="https://github.com/WiseHax" target="_blank" class="text-decoration-none d-flex align-items-center justify-content-center gap-4">
+                <i class="fa-brands fa-github fa-3xl text-white"></i>
+                <span class="display-4 fw-800 text-white tracking-tighter">WiseHax</span>
+            </a>
+        </div>
+
+        <!-- Final CTA -->
+        <section class="py-5 my-5 reveal">
+            <div class="cta-briefing">
+                <h2 class="display-4 fw-800 text-white mb-4">READY TO EXPLORE?</h2>
+                <p class="text-white-50 fs-5 mb-5 mx-auto" style="max-width: 600px;">Join the thousands of users discovering new sector nodes every day.</p>
+                <a href="Food.html" class="btn-core">
+                    Initialize Discovery <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-v2">
+        <div class="container text-center">
+            <a class="navbar-brand fs-1 d-block mb-4" href="#">CITYCORE.</a>
+            <p class="text-white-50 small">&copy; 2026 CityCore Intelligence. Orbital Systems Active.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/three-bg.js"></script>
+    <script src="Scripts/about.js"></script>
+</body>
+</html>

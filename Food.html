@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find the best places to eat in the planetary network.">
+    <title>Sustenance Sector | CITYCORE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/global.css">
+    <link rel="stylesheet" href="Styles/directory.css">
+</head>
+<body>
+
+    <canvas id="three-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">CITYCORE<span>.</span></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Universe</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Food.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">Mission</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="directory-header reveal">
+            <span class="badge rounded-pill px-3 py-2 mb-3" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.3); color: #818cf8;">SECTOR: SUSTENANCE</span>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-4">
+                <div>
+                    <h1 class="display-3 fw-800 tracking-tighter mb-2">Planetary <span style="color: var(--primary-light)">Dining.</span></h1>
+                    <p class="text-white-50 fs-5 mb-0">Exploring high-fidelity culinary nodes across the city network.</p>
+                </div>
+                <div class="search-wrapper-v2">
+                    <input type="text" class="search-input-v2" placeholder="Search the sector data...">
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-3">
+                <div class="glass-panel p-4 sticky-top" style="top: 100px;">
+                    <h5 class="fw-bold mb-4"><i class="fa-solid fa-sliders me-2 text-primary"></i> Filter Logic</h5>
+                    
+                    <button id="near-me-btn" class="btn btn-primary w-100 mb-3 rounded-pill py-3 fw-bold shadow-lg">
+                        <i class="fa-solid fa-location-arrow me-2"></i> Sync Proximity
+                    </button>
+                    <button id="sort-rating-btn" class="btn btn-outline-light w-100 mb-4 rounded-pill py-3 fw-bold">
+                        <i class="fa-solid fa-star me-2"></i> Top Rated
+                    </button>
+                    
+                    <hr class="opacity-10 mb-4">
+
+                    <h6 class="fw-bold mb-3 small opacity-50 text-uppercase tracking-wider">Sector Categories</h6>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="local" id="check1">
+                        <label class="form-check-label opacity-75" for="check1">Local Favorites / Grill</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="cafe" id="check2">
+                        <label class="form-check-label opacity-75" for="check2">Cafes & Desserts</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="restaurant" id="check3">
+                        <label class="form-check-label opacity-75" for="check3">Casual Dining</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="fast_food" id="check4">
+                        <label class="form-check-label opacity-75" for="check4">Quick Service Nodes</label>
+                    </div>
+                    
+                    <button class="btn btn-link text-primary text-decoration-none fw-bold small p-0 mt-3">Reset All Filters</button>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="mb-5">
+                    <span class="text-white-50 fw-semibold" id="result-count">Analyzing nearby nodes...</span>
+                </div>
+
+                <!-- RESTORED GRID -->
+                <div id="listing-grid" class="row">
+                    <!-- Dynamic Nodes Inject Here -->
+                </div>
+            </div>
+
+                <div id="listing-grid" class="row g-4 reveal">
+                    <!-- Dynamic Nodes -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-v2">
+        <div class="container text-center">
+            <a class="navbar-brand fs-2 mb-4 d-block" href="#">CITYCORE.</a>
+            <p class="text-white-50 small mb-0">&copy; 2026 CityCore Intelligence.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/three-bg.js"></script>
+    <script type="module" src="Scripts/directory.js"></script>
+</body>
+</html>
